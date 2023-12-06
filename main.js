@@ -96,6 +96,8 @@ if(carritoLS){
     carrito = []
 }
 
+let botonAgregar = document.querySelectorAll(".agregarCarrito")
+
 let productoContainer = document.getElementById("productoContainer")
 
 function renderCarrito (mercaderia){
@@ -103,11 +105,26 @@ function renderCarrito (mercaderia){
         const card = document.createElement("div")
         card.innerHTML =   `<h3>${producto.nombre}</h3>
                             <img src="${producto.img}" alt="${producto.nombre}">
-                            <p>Precio: $${producto.precio}`
+                            <p>Precio: $${producto.precio}
+                            <button class="agregarCarrito" id="${producto.id}">Agregar al carrito</button>`
         productoContainer.appendChild(card)
     })
+    botonAgregarCarrito()
 }
 
 renderCarrito(mercaderia)
 
+function botonAgregarCarrito (){
+    botonAgregar = document.querySelectorAll(".agregarCarrito")
+    botonAgregar.forEach(button =>{
+        button.onclick = (e) => {
+            const idActual = e.currentTarget.id
+            const productoDeseado = mercaderia.find(producto => producto.id == idActual)
 
+            carrito.push(productoDeseado)
+            console.log(carrito)
+
+            localStorage.setItem("Carrito", JSON.stringify(carrito))
+        }
+    })
+}
