@@ -102,8 +102,8 @@ function renderCarrito (mercaderia){
     mercaderia.forEach(producto => {
         const card = document.createElement("div")
         card.innerHTML =   `<h3>${producto.nombre}</h3>
-                        <img src="${producto.img}" alt="${producto.nombre}">
-                        <p>Precio: $${producto.precio}`
+                            <img src="${producto.img}" alt="${producto.nombre}">
+                            <p>Precio: $${producto.precio}`
         productoContainer.appendChild(card)
     })
 }

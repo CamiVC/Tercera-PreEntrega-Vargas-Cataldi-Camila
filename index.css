@@ -1,0 +1,29 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#productoContainer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: left;
+    justify-content: center;
+}
+
+#productoContainer div{
+    margin: 10px;
+    padding: 10px;
+    border: solid black 2px;
+    width: 500px;
+    height: 500px;
+    /* width: 500px;
+    height: 500px; */
+
+}
+
+#productoContainer div img{
+    width:90%;
+    height:90%;
+}
