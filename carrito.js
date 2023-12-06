@@ -35,4 +35,11 @@ function botonEliminarCarrito(){
 console.log(carritoCompras)
 mostrarProductos(carritoCompras)
 
+let vaciarCarrito = document.getElementById("vaciarCarrito")
 
+function borrarTodo (){
+    vaciarCarrito.onclick = () =>{
+        localStorage.clear()
+        carritoCompras = []
+    }
+}

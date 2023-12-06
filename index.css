@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-.categorias{
+#categorias{
     display: flex;
     justify-content:space-around;
     
 }
 
-.categorias button{
+#categorias button{
     
     margin: 5px;
     font-size: 20px;
@@ -18,6 +18,14 @@
     border: solid 2px black;
     width: 160px;
     height: 35px;
+}
+
+#categorias button:hover{
+    background-color: violet;
+}
+
+body a{
+    font-size: 30px;
 }
 
 #productoContainer{
