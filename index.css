@@ -4,6 +4,22 @@
     box-sizing: border-box;
 }
 
+.categorias{
+    display: flex;
+    justify-content:space-around;
+    
+}
+
+.categorias button{
+    
+    margin: 5px;
+    font-size: 20px;
+    text-align: center;
+    border: solid 2px black;
+    width: 160px;
+    height: 35px;
+}
+
 #productoContainer{
     display: flex;
     flex-direction: row;

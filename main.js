@@ -125,6 +125,30 @@ function botonAgregarCarrito (){
             console.log(carrito)
 
             localStorage.setItem("Carrito", JSON.stringify(carrito))
+            alert("Producto agregado al carrito")
         }
     })
 }
+
+
+
+let filtrarProductos = (Boton) => {
+    productoContainer.innerHTML = ""
+    let arrayFiltrado = mercaderia.filter(producto => producto.categoria == Boton)
+    if (arrayFiltrado.length == 0){
+        renderCarrito(mercaderia)
+    } else {
+        renderCarrito(arrayFiltrado)
+    }
+    console.log(arrayFiltrado)
+}
+
+
+
+let botonesCategoria = document.getElementById("categorias")
+
+botonesCategoria.addEventListener("click" , (e) => {
+    let idBoton = e.target.id
+    filtrarProductos(idBoton)
+})
+
